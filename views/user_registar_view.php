@@ -45,6 +45,10 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
                                         <label class="form-label" for="form2Example11">Apellidos</label>
                                     </div>
                                     <div class="form-outline mb-4">
+                                        <input type="text" name="address" class="form-control" />
+                                        <label class="form-label" for="form2Example11">Address</label>
+                                    </div>
+                                    <div class="form-outline mb-4">
                                         <input type="email" name="mail" class="form-control" />
                                         <label class="form-label" for="form2Example11">Correo Electrónico</label>
                                     </div>

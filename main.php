@@ -14,7 +14,7 @@ include 'views/header_shop.php'; //se lo pasamos a la vista especifica
                             <div class="card-body p-md-5 mx-md-4">
                                     <div class="text-center pt-1 mb-5 pb-1">
                                         <div class="form-outline mb-4">
-                                            <a href="./index_listarCategory.php" class="btn btn-lg btn-outline-secondary" type="button">Registrar Usuario</a>
+                                            <a href="./index_registar.php" class="btn btn-lg btn-outline-secondary" type="button">Registrar Usuario</a>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <a href="./index_listarComics.php" class="btn btn-lg btn-outline-secondary" type="button">Listar Usuarios</a>

@@ -4,7 +4,7 @@ ob_start(); //no me redirigía los header sin esta función
 function inicio()
 {
     //Pasa a la vista toda la informacion que se desea representar
-    include 'views/index_view.php'; //se lo pasamos a la vista especifica
+    include 'main.php'; //se lo pasamos a la vista especifica
 }
 
 function login(){
@@ -29,7 +29,7 @@ function login(){
     }
 }
 
-function registar(){
+function registarUsuario(){
 
     include('./views/user_registar_view.php');
     // Comprueba si el formulario ha sido enviado.
