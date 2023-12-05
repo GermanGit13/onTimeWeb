@@ -21,7 +21,7 @@ function verifyLogin($username, $pass) {
             $_SESSION['username']=$userApi['username']; //añadimos el username
             $_SESSION['rol']=$userApi['rol']; //añadimos el rol
 
-            header('Location: index_listarCategory.php');
+            header('Location: main.php');
 //            return $userApi;
 
         } else {
