@@ -1,5 +1,8 @@
 <?php
 include 'views/header_shop.php'; //se lo pasamos a la vista especifica
+if ($_SESSION == null) {
+    header('Location: index.php');
+}
 
 ?>
 <main>

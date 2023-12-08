@@ -40,12 +40,13 @@ if(!isset($_SESSION['username']))
                 <li class="nav-item"><a class="nav-link me-lg-3" href="">Registrar Usuario</a></li>
                 <li class="nav-item"><a class="nav-link me-lg-3" href="">Listar Usuarios</a></li>
             </ul>
-            <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            <a href="index.php" class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal" type="button" >
                         <span class="d-flex align-items-center">
+
                             <i class="bi-chat-text-fill me-2"></i>
                             <span class="small">Cerrar Sesión</span>
                         </span>
-            </button>
+            </a>
         </div>
     </div>
 </nav>
