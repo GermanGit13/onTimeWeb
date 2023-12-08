@@ -12,26 +12,41 @@ if(!isset($_SESSION['username']))
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-    <!-- Para usar la hoja de estilos de  Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- FIN hoja de estilos de  Bootstrap -->
-    <!--Para incrustar las fuente desde google-->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
-    <!--FIN incrustar las fuente desde google-->
-
-    <nav class="navbar navbar-dark bg-dark">
-        <img src="/img/logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-top">
-    </nav>
-
-    <nav class="navbar bg-dark" data-bs-theme="dark">
-        <div class="container text-center">
-            <div class="row">
-                <h4 style="color: aliceblue"> Bienvenido a la Web de Administración de OnTime: <?php echo $_SESSION['username']?></h4>
-
-            </div>
-        </div>
-    </nav>
-
-
+<!-- Para usar la hoja de estilos de  Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- FIN hoja de estilos de  Bootstrap -->
+<!--Para incrustar las fuente desde google-->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
+<!--FIN incrustar las fuente desde google-->
 </head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav" style="background-color: white">
+    <div class="container px-5">
+        <img
+                src="/img/logo.png"
+                height="75"
+                alt="OnTime Logo"
+                loading="lazy"
+                style="margin-top: -1px;"
+        />
+        <a class="navbar-brand fw-bold" href="#page-top">Bienvenido a la Web de Administración de OnTime: <?php echo $_SESSION['username']?></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link me-lg-3" href="">Registrar Usuario</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3" href="">Listar Usuarios</a></li>
+            </ul>
+            <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                        <span class="d-flex align-items-center">
+                            <i class="bi-chat-text-fill me-2"></i>
+                            <span class="small">Cerrar Sesión</span>
+                        </span>
+            </button>
+        </div>
+    </div>
+</nav>
+

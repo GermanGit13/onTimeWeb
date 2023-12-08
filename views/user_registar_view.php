@@ -4,7 +4,7 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
 
 <body>
 
-<section class="h-100 gradient-form" style="background-color: #eee;">
+<section class="h-1000 gradient-form" style="background-image: url('/img/fondo-main.jpeg'); background-size: cover">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
@@ -63,7 +63,7 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
                                     <div class="text-center pt-1 mb-5 pb-1">
 <!--                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit">Iniciar Sesión</button>-->
                                         <input class="btn btn-primary" type='submit' name='submitRegister' onclick="return confirm('¿Bienvenido, inicia sesión y empieza a disfrutar.')" value='Registrarse'>
-                                        <a href="index.php" class="btn btn-danger" type="button">Cancelar</a>
+                                        <a href="main.php" class="btn btn-danger" type="button">Volver</a>
                                     </div>
                                 </form>
 
@@ -72,7 +72,7 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
 
                                 <div class="d-flex align-items-center justify-content-center pb-4">
-                                    <img src="/img/registrar_usuario.png"
+                                    <img src="/img/registrarUser.png"
                                 </div>
                             </div>
                         </div>
