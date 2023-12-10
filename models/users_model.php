@@ -78,6 +78,16 @@ function addUser($username, $pass, $rol, $department, $name, $surname, $mail, $a
     return $respuesta;
 }
 
+/**
+ * Cerrar sesión
+ */
+function cerrarSesion() {
+    session_start();
+    $_SESSION=array();
+    session_destroy();
+    header('Location: index.php');
+}
+
 
 
 

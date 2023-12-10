@@ -58,6 +58,11 @@ function registarUsuario(){
     }
 }
 
+function logout() {
+    require ('./models/users_model.php');
+    $user = cerrarSesion();
+}
+
 
 
 
