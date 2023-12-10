@@ -1,10 +1,14 @@
 <?php
 include 'views/header.php'; //se lo pasamos a la vista especifica
+//if ($_SESSION['rol'] != 'ADMIN') {
+//    echo "<script>alert('No tienes permisos para usar OnTimeWeb');</script>";
+//    header('Location: index.php');
+//}
 ?>
 
 <body>
 
-<section class="h-100 gradient-form" style="background-color: #eee;">
+<section class="h-1000 gradient-form" style="background-image: url('/img/fondo-main.jpeg'); background-size: cover">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
