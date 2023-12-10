@@ -48,7 +48,7 @@ function registarUsuario(){
         $photo = htmlspecialchars($_POST['photo']);
 
         // Comprueba que todos campos han sido introducidos
-        if ($username == '' || $pass == '' || $rol == '') {
+        if ($username == '' || $pass == '' || $rol == '' || $phone == '') {
             // Genera el mensaje de error
             $error = 'ERROR: Por favor, introduce todos los campos requeridos.!';
         } else {

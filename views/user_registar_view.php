@@ -1,5 +1,6 @@
 <?php
 include 'views/header.php'; //se lo pasamos a la vista especifica
+$error_username = $error_pass = $error_rol = $error_phone = '';
 ?>
 
 <body>
@@ -21,15 +22,18 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
 
                                 <form method="post">
                                     <div class="form-outline mb-4">
-                                        <input type="text" name="username" class="form-control" />
+                                        <input type="text" name="username" class="form-control" required />
                                         <label class="form-label" for="form2Example11">Nombre de Usuario</label>
+                                        <span>
+                                             <?php echo $error_username; ?>
+                                        </span>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input type="password" name="pass" class="form-control" />
+                                        <input type="password" name="pass" class="form-control" required/>
                                         <label class="form-label" for="form2Example22">Contraseña</label>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input type="text" name="rol" class="form-control" />
+                                        <input type="text" name="rol" class="form-control" required/>
                                         <label class="form-label" for="form2Example11">Rol</label>
                                     </div>
                                     <div class="form-outline mb-4">
@@ -53,7 +57,7 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
                                         <label class="form-label" for="form2Example11">Correo Electrónico</label>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input type="text" name="phone" class="form-control" />
+                                        <input type="text" name="phone" class="form-control" required/>
                                         <label class="form-label" for="form2Example11">Teléfono</label>
                                     </div>
                                     <div class="form-outline mb-4">
@@ -62,7 +66,7 @@ include 'views/header.php'; //se lo pasamos a la vista especifica
                                     </div>
                                     <div class="text-center pt-1 mb-5 pb-1">
 <!--                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit">Iniciar Sesión</button>-->
-                                        <input class="btn btn-primary" type='submit' name='submitRegister' onclick="return confirm('¿Bienvenido, inicia sesión y empieza a disfrutar.')" value='Registrarse'>
+                                        <input class="btn btn-primary" type='submit' name='submitRegister' value='Registrarse'>
                                         <a href="main.php" class="btn btn-danger" type="button">Volver</a>
                                     </div>
                                 </form>

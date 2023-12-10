@@ -51,18 +51,26 @@ function addUser($username, $pass, $rol, $department, $name, $surname, $mail, $a
 
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($usuario)); // Le pasamos el array creado para codificarlo por json
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json')); // Como va ir escrita la llamada
-    curl_setopt($ch, CURLOPT_POST, 1); // recuperamos los datos
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // recuperamos los datos
     $respuesta = curl_exec($ch);
 
     curl_close($ch); // recuperamos los datos
+//    var_dump($respuesta);
 
-    if($respuesta != null) {
-        echo "<script>alert('Username ya registrado en la BBDD');</script>";
+    $user = json_decode($respuesta, true);
+
+    echo "<script> console.log($respuesta);</script>";
+    echo "<script> console.log($user);</script>";
+
+    if ($user['code'] == 500) {
+        echo "<script>alert('Username ya existe en la BBDD');</script>";
+            return $respuesta;
+
     } else {
-        echo "<script>alert('Username registrado en la BBDD');</script>";
-
-        header('Location: main.php');
+        echo "<script>alert('Usuario registrado correctamente');</script>";
     }
+    return $respuesta;
 }
 
 
