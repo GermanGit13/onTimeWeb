@@ -10,5 +10,4 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
     <!--FIN incrustar las fuente desde google-->
 
-
 </head>
