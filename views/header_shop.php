@@ -30,7 +30,7 @@ if(!isset($_SESSION['username']))
                 loading="lazy"
                 style="margin-top: -1px;"
         />
-        <a class="navbar-brand fw-bold" href="#page-top">Bienvenido a la Web de Administración de OnTime: <?php echo $_SESSION['username']?></a>
+        <a class="navbar-brand fw-bold" href="#page-top">Bienvenido a la Web de Administración de OnTime: <?php echo $_SESSION['rol']?></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="bi-list"></i>

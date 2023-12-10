@@ -1,5 +1,9 @@
 <?php
 include 'views/header.php'; //se lo pasamos a la vista especifica
+//if ($_SESSION['rol'] != 'ADMIN') {
+//    echo "<script>alert('No tienes permisos para usar OnTimeWeb');</script>";
+//    header('Location: index.php');
+//}
 ?>
 
 <body>

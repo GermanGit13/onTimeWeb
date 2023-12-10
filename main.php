@@ -1,6 +1,6 @@
 <?php
 include 'views/header_shop.php'; //se lo pasamos a la vista especifica
-if ($_SESSION == null) {
+if ($_SESSION['rol'] != 'ADMIN') {
     header('Location: index.php');
 }
 

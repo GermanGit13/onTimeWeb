@@ -15,15 +15,20 @@ function verifyLogin($username, $pass) {
 
     $userApi = json_decode($result, true); // Métomos los datos en una variable
 
+//    echo "<script> console.log($result);</script>";
+//    echo "<script> console.log($userApi);</script>";
+
         if ($userApi != null) {
             session_start();          //Iniciamos la sesión para luego recuperarla
             $_SESSION['id']=$userApi['id']; //añadimos el id
             $_SESSION['username']=$userApi['username']; //añadimos el username
             $_SESSION['rol']=$userApi['rol']; //añadimos el rol
 
-            header('Location: main.php');
-//            return $userApi;
-
+            if (strcasecmp($_SESSION['rol'],'ADMIN') == 0) {
+                header('Location: main.php');
+            } else {
+                echo "<script>alert('No tienes permisos para usar OnTimeWeb');</script>";
+            }
         } else {
             echo "<script>alert('Usuario y Contraseña incorrectos');</script>";
         }
